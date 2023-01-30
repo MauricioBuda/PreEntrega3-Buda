@@ -1,0 +1,51 @@
+/* INICIO DE TIPS */
+
+.tips__h1 {
+  @extend .dflex-jcenter;
+    text-align: center;
+    font-size: 4vw;
+    font-family: 'Great Vibes', cursive;
+    margin: 5rem 2rem 5rem 0rem;
+    color: white;
+  }
+  
+  .tips__h2 {
+    @extend .dflex-jcenter;
+    text-align: center;
+    font-size: 3vw;
+    margin-bottom: 3rem;
+    color: white;
+  }
+  
+  .tips__link {
+    @extend .dflex-jcenter;
+    margin-bottom: 3rem;
+  }
+
+/* FINAL DE TIPS */
+
+/* INICIO DE MEDIA-QUERYS DE TIPS */
+
+@media screen and (max-width: $pantallas-medianas) {
+  .tips__h2 {
+    font-size: 4vw;
+    }
+  .tips__h1 {
+    font-size: 6vw;
+    }
+}
+  
+  @media screen and (max-width: $pantallas-chicas) {
+    .tips__h2 {
+    font-size: 5vw;
+    }
+    .tips__h1 {
+    font-size: 8vw;
+    }
+    .tips__section div iframe{
+    margin-left: 2rem;
+    margin-right: 2rem;
+    }
+  }
+
+/* FINAL DE MEDIA-QUERYS DE TIPS */

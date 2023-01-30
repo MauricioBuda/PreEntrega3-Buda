@@ -1,0 +1,151 @@
+/* INICIO INDEX NAV BAR */
+
+.nav_bs {
+  display: grid;
+  justify-content: space-around;
+  align-items: center;
+
+  ul {
+    row-gap: 2vw;
+    column-gap: 5vw;
+    font-size: 1.8vw;
+    color: white;
+  }
+
+  ul li a {
+    color: white;
+  }
+}
+
+.index__bg-nav{
+  background-image:$bi-nav;
+}
+
+.index__img-nav {
+  width: 5.5vw;
+  transition: all .5s ease-in-out;
+
+  &:hover {
+    filter: saturate(180%);
+  }
+}
+
+/* FINAL INDEX NAV BAR */
+
+/* INICIO INDEX PRINCIPAL */
+
+#carouselExampleIndicators{
+  margin-bottom: 5vw;
+  @include tamaño (23vw,46vw);
+}
+
+  .index__carrusel div img{
+    @include tamaño (23vw,46vw);
+    object-fit: cover;
+  }
+
+  .carousel-indicators{
+    margin-bottom: 1%;
+  }
+
+.index__section1 div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.index__h1 {
+  margin-top: 4rem;
+  color: white;
+  font-family: $font-titulos;
+  align-items: center;
+  font-size: 10vw;
+}
+
+.index__imagen2 {
+  margin: 1rem;
+  width: 25rem;
+  transition: all .5s ease-in-out;
+
+  &:hover {
+    filter: opacity(.5);
+  }
+}
+
+.index__section2 {
+  @extend .dflex-jcenter;
+}
+
+/* FINAL INDEX PRINCIPAL */
+
+/* INICIO DE MEDIA-QUERYS DEL INDEX */
+
+@media screen and (max-width: $pantallas-masgrandes) {
+  .index__h1 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: $pantallas-grandes) {
+  .nav_bs ul {
+    font-size: 2.5vw;
+  }
+
+  .index__section1-img div a {
+    display: none;
+  }
+
+  .index__h1 {
+    text-align: center;
+    padding: 5rem 0;
+  }
+}
+
+
+@media screen and (max-width: $pantalla-bs) {
+  .nav_bs ul {
+    font-size: 3.5vw;
+  }
+
+  .index__img-nav {
+    width: 7vw;
+  }
+}
+
+@media screen and (max-width: $pantallas-medianas) {
+  #carouselExampleIndicators{
+    @include tamaño (33vw,66vw);
+
+  }
+  
+    .index__carrusel div img{
+      @include tamaño (33vw,66vw);
+      object-fit: cover;
+    }
+  
+}
+
+@media screen and (max-width: $pantallas-chicas) {
+  .nav_bs ul li a {
+    font-size: 6.5vw;
+  }
+
+  .index__img-nav {
+    width: 20vw;
+  }
+
+  .index__h1 {
+    font-size: 7rem;
+  }
+
+  #carouselExampleIndicators{
+    @include tamaño (43vw,86vw);
+  }
+  
+    .index__carrusel div img{
+      @include tamaño (43vw,86vw);
+      object-fit: cover;
+    }
+}
+
+/* FINAL DE MEDIA-QUERYS DEL INDEX */

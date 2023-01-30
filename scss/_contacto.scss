@@ -1,0 +1,136 @@
+/* INICIO CONTACTO */
+
+fieldset:disabled {
+    pointer-events: revert;
+    opacity: revert;
+  }
+  
+  fieldset {
+    min-width: revert;
+    padding: revert;
+    margin: revert;
+    border: revert;
+  }
+  
+  legend {
+    float: unset;
+    width: auto;
+  }
+  
+  .contacto__h1 {
+    @extend .dflex-jcenter;
+    text-align: center;
+    font-size: 4vw;
+    font-family: $font-titulos;
+    margin: 5rem 2rem 5rem 0rem;
+    color: white;
+  }
+  
+  .contacto__h2 {
+    @extend .dflex-jcenter;
+    text-align: center;
+    font-size: 2.5vw;
+    margin-bottom: 3rem;
+    color: white;
+  }
+  
+  .contacto__form {
+    @extend .dflex-jcenter;
+    margin: 8rem;
+  }
+  
+  .contacto__fieldset {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+
+    legend {
+      font-size: 2vw;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+    }
+  } 
+  
+  .contacto__div--input div {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+  }
+  
+  .contacto__input--renglones {
+    width: 35vw;
+  }
+  
+  .contacto__div--label label {
+    font-size: 3vw;
+  }
+  
+  .contacto__div--input input::placeholder {
+    font-size: 2vw;
+    padding-left: 1vw;
+  }
+  
+  .contacto__textarea textarea::placeholder {
+    font-size: 2vw;
+    text-align: center;
+    padding-top: 10rem;
+  }
+  
+  .contacto__boton-enviar {
+    width: 30vw;
+    align-self: center;
+
+    input {
+      @extend .dflex-jcenter;
+      padding: 1rem;
+      background-color: rgb(158, 75, 165);
+      color: white;
+      border: solid;
+      font-size: 2rem;
+      border-radius: 30px;
+    }
+
+    input:hover {
+      color: rgb(158, 75, 165);
+      background-color: white;
+    }
+  } 
+
+/* FINAL CONTACTO */
+
+/* INICIO DE MEDIA-QUERYS DE CONTACTO */
+  
+  @media screen and (max-width: $pantallas-medianas) {
+    .contacto__h2 {
+      font-size: 4.5vw;
+    }
+    .contacto__h1 {
+      font-size: 5.5vw;
+    }
+  }
+  @media screen and (max-width: $pantallas-chicas) {
+    .contacto__h2 {
+      font-size: 5.5vw;
+    }
+    .contacto__h1 {
+      font-size: 10vw;
+    }
+    .contacto__div--label label {
+      font-size: 4vw;
+    }
+    .contacto__div--input input::placeholder {
+      font-size: 4vw;
+    }
+    .contacto__textarea textarea::placeholder {
+      font-size: 4vw;
+    }
+    .contacto__fieldset legend {
+      font-size: 3.5vw;
+    }
+  }
+
+/* FINAL DE MEDIA-QUERYS DE CONTACTO */

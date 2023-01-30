@@ -1,0 +1,39 @@
+/* INICIO DE GLOBALES */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    height: 100%;
+}
+
+img{
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    font-family: $font-general;
+    background-image: $bi-body;
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+/* EXTEND */
+
+.dflex-jcenter{
+    display: flex;
+    justify-content: center;
+}
+
+/* FINAL DE GLOBALES */

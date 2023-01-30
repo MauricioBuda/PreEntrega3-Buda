@@ -1,0 +1,120 @@
+/* INICIO DE UBICACION */
+
+.ubicacion__h1 {
+  @extend .dflex-jcenter;
+    margin: 5rem 2rem 5rem 0rem;
+    color: white;
+    font-size: 4vw;
+    font-family: $font-titulos;
+    text-align: center;
+  }
+  
+  .ubicacion__h2 {
+    @extend .dflex-jcenter;
+    font-size: 2.5vw;
+    margin-bottom: 3rem;
+    color: white;
+  }
+  
+  .ubicacion__mapa {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 450px 150px;
+    margin-bottom: 4vw;
+    grid-template-areas: "mapa texto" "mapa foto";
+
+    div iframe {
+      grid-area: mapa;
+      width: 65vw;
+      margin: 2vw;
+    }
+  }
+
+  .ubicacion__h3 {
+    display: flex;
+    grid-area: texto;
+    text-align: center;
+    color: white;
+
+    h3 {
+      font-size: 3vw;
+      @extend .dflex-jcenter;
+      align-items: center;
+      max-width: 100%;
+    }
+  }
+  
+  .ubicacion__img--none {
+    display: none;
+  }
+  
+  .ubicacion__img {
+    display: flex;
+    max-width: 100%;
+    @extend .dflex-jcenter;
+    align-items: center;
+    grid-area: foto;
+    gap: 1rem;
+
+    a img {
+      margin: 1rem;
+    }
+
+    a {
+      transition: all .5s ease-in-out;
+    }
+
+    a:hover {
+      filter: saturate(180%)
+    }
+  }  
+
+/* FINAL UBICACION */
+
+/* INICIO DE MEDIA-QUERYS DE UBICACION */
+  
+  @media screen and (max-width: $pantallas-grandes) {
+    .ubicacion__mapa {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 600px 200px 200px;
+      margin-bottom: 4vw;
+      grid-template-areas: "mapa" "texto" "foto";
+    }
+    .ubicacion__h1 {
+      font-size: 4vw;
+    }
+    .ubicacion__h2 {
+      font-size: 3vw;
+    }
+    .ubicacion__h3 h3 {
+      display: flex;
+      grid-area: texto;
+      font-size: 3.5vw;
+      text-align: center;
+      padding: 0 3rem;
+    }
+    .ubicacion__img--none {
+      display: flex;
+    }
+    .ubicacion__div--iframe {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  @media screen and (max-width: $pantallas-chicas) {
+    .ubicacion__h3 h3 {
+      font-size: 6vw;
+    }
+    .ubicacion__img a img{
+      margin: 0rem;
+    }
+    .ubicacion__h2 {
+      font-size: 5vw;
+    }
+    .ubicacion__h1 {
+      font-size: 7.5vw;
+    }
+  } 
+
+/* FINAL DE MEDIA-QUERYS DE UBICACION */
